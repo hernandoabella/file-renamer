@@ -1,0 +1,202 @@
+2025-11-24T23:33:31.334230Z  INFO tailwindcss_oxide::scanner: Provided sources:
+2025-11-24T23:33:31.334377Z  INFO tailwindcss_oxide::scanner: Source: PublicSourceEntry { base: "G:\\GitHub\\file-renamer", pattern: "**/*", negated: false }
+2025-11-24T23:33:31.334726Z  INFO tailwindcss_oxide::scanner: Optimized sources:
+2025-11-24T23:33:31.334758Z  INFO tailwindcss_oxide::scanner: Source: Auto { base: "G:\\GitHub\\file-renamer" }
+2025-11-24T23:33:31.337414Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:33:31.339707Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:33:31.340050Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app\\globals.css"
+2025-11-24T23:33:31.343003Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app\\layout.tsx"
+2025-11-24T23:33:31.343152Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app\\page.tsx"
+2025-11-24T23:33:31.343320Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\eslint.config.mjs"
+2025-11-24T23:33:31.343437Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\next.config.ts"
+2025-11-24T23:33:31.343803Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\package.json"
+2025-11-24T23:33:31.343905Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\postcss.config.mjs"
+2025-11-24T23:33:31.344045Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:33:31.344254Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public\\file.svg"
+2025-11-24T23:33:31.344355Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public\\globe.svg"
+2025-11-24T23:33:31.344462Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public\\next.svg"
+2025-11-24T23:33:31.344563Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public\\vercel.svg"
+2025-11-24T23:33:31.344659Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public\\window.svg"
+2025-11-24T23:33:31.344773Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\README.md"
+2025-11-24T23:33:31.344894Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\tsconfig.json"
+2025-11-24T23:33:31.345095Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:33:31.345126Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2025-11-24T23:33:31.345156Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:33:31.345163Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 13 file(s)
+2025-11-24T23:33:31.346175Z  INFO tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\package.json"
+2025-11-24T23:33:31.346179Z  INFO tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\next.config.ts"
+2025-11-24T23:33:31.346185Z  INFO tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\app\\layout.tsx"
+2025-11-24T23:33:31.346220Z  INFO tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\public\\vercel.svg"
+2025-11-24T23:33:31.346225Z  INFO tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\README.md"
+2025-11-24T23:33:31.346240Z  INFO tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\public\\file.svg"
+2025-11-24T23:33:31.346331Z  INFO tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\postcss.config.mjs"
+2025-11-24T23:33:31.346332Z  INFO tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\app\\page.tsx"
+2025-11-24T23:33:31.346363Z  INFO tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\public\\window.svg"
+2025-11-24T23:33:31.346341Z  INFO tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\tsconfig.json"
+2025-11-24T23:33:31.346405Z  INFO tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\eslint.config.mjs"
+2025-11-24T23:33:31.348339Z  INFO tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\public\\globe.svg"
+2025-11-24T23:33:31.348673Z  INFO tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\public\\next.svg"
+2025-11-24T23:33:31.349748Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:33:31.349767Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2025-11-24T23:33:31.349775Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2025-11-24T23:33:31.350484Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2025-11-24T23:33:31.350523Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2025-11-24T23:33:31.350530Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:33:31.350534Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2025-11-24T23:33:31.350623Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\app\\globals.css"
+2025-11-24T23:33:31.350638Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:33:31.350649Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: enter
+2025-11-24T23:33:31.350654Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: enter
+2025-11-24T23:33:31.350944Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: exit
+2025-11-24T23:33:31.350963Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: exit
+2025-11-24T23:33:31.351424Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2025-11-24T23:33:31.351685Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:33:31.351698Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:33:31.353290Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:33:31.354466Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:33:31.355216Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:33:31.355383Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:33:31.355499Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2025-11-24T23:33:31.355509Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:33:31.357245Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:33:31.358325Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:33:31.358984Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:33:31.362680Z  INFO get_globs: tailwindcss_oxide::scanner: exit
+2025-11-24T23:34:58.492320Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:34:58.493785Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:34:58.494036Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app\\page.tsx"
+2025-11-24T23:34:58.494462Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:34:58.494866Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:34:58.494877Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2025-11-24T23:34:58.494882Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:34:58.494885Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2025-11-24T23:34:58.494958Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\app\\page.tsx"
+2025-11-24T23:34:58.494998Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:34:58.495005Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2025-11-24T23:34:58.495009Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2025-11-24T23:34:58.495139Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2025-11-24T23:34:58.495152Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2025-11-24T23:34:58.495309Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2025-11-24T23:34:58.495441Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:34:58.495448Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:34:58.496577Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:34:58.497137Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:34:58.497494Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:34:58.497574Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:34:58.497659Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2025-11-24T23:34:58.497666Z  INFO get_globs: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:20.855772Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:20.857306Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:35:20.857667Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app\\page.tsx"
+2025-11-24T23:35:20.858074Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:35:20.858514Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:20.858526Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:20.858531Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:20.858534Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2025-11-24T23:35:20.858609Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\app\\page.tsx"
+2025-11-24T23:35:20.858620Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:20.858624Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:20.858627Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:20.858781Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:20.858795Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:20.858946Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:20.859072Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:20.859079Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:20.860133Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:35:20.860690Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:35:20.861045Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:20.861124Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:20.861194Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:20.861201Z  INFO get_globs: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:28.984730Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:28.985990Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:35:28.986197Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app\\page.tsx"
+2025-11-24T23:35:28.986605Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:35:28.986983Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:28.986993Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:28.986998Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:28.987001Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2025-11-24T23:35:28.987064Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\app\\page.tsx"
+2025-11-24T23:35:28.987073Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:28.987078Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:28.987081Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:28.987216Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:28.987229Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:28.987313Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:28.987398Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:28.987404Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:28.988415Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:35:28.988958Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:35:28.989319Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:28.989404Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:35:28.989471Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2025-11-24T23:35:28.989477Z  INFO get_globs: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:40.683507Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:40.684941Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:37:40.685164Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app\\page.tsx"
+2025-11-24T23:37:40.685564Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:37:40.685956Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:40.685967Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:40.685972Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:40.685975Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2025-11-24T23:37:40.686041Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\app\\page.tsx"
+2025-11-24T23:37:40.686050Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:40.686055Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:40.686059Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:40.686194Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:40.686208Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:40.686298Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:40.686400Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:40.686407Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:40.687465Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:37:40.688023Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:37:40.688373Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:40.688480Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:40.688550Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:40.688557Z  INFO get_globs: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:52.621526Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:52.623591Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:37:52.623949Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app\\page.tsx"
+2025-11-24T23:37:52.624612Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:37:52.625178Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:52.625194Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:52.625202Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:52.625207Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2025-11-24T23:37:52.625317Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\app\\page.tsx"
+2025-11-24T23:37:52.625332Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:52.625338Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:52.625344Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:52.625506Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:52.625521Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:52.625621Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:52.625747Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:52.625755Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:52.627203Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:37:52.627758Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:37:52.628129Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:52.628208Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:37:52.628290Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2025-11-24T23:37:52.628297Z  INFO get_globs: tailwindcss_oxide::scanner: exit
+2025-11-24T23:38:09.622112Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:38:09.624204Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:38:09.624590Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app\\page.tsx"
+2025-11-24T23:38:09.625244Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:38:09.625827Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:38:09.625843Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2025-11-24T23:38:09.625850Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:38:09.625855Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2025-11-24T23:38:09.625955Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "G:\\GitHub\\file-renamer\\app\\page.tsx"
+2025-11-24T23:38:09.625970Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:38:09.625977Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2025-11-24T23:38:09.625983Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2025-11-24T23:38:09.626130Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2025-11-24T23:38:09.626151Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2025-11-24T23:38:09.626309Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2025-11-24T23:38:09.626463Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2025-11-24T23:38:09.626470Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2025-11-24T23:38:09.627723Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\app"
+2025-11-24T23:38:09.628312Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "G:\\GitHub\\file-renamer\\public"
+2025-11-24T23:38:09.628682Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2025-11-24T23:38:09.628774Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2025-11-24T23:38:09.628892Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2025-11-24T23:38:09.628900Z  INFO get_globs: tailwindcss_oxide::scanner: exit
