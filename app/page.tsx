@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import JSZip from "jszip";
-import { FaUpload, FaDownload, FaFile, FaTrash, FaCopy, FaMagic, FaImage, FaFileArchive, FaTimes } from "react-icons/fa";
+import { FaUpload, FaDownload, FaFile, FaTrash, FaCopy, FaMagic, FaImage, FaFileArchive, FaTimes, FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function FileRenamerPro() {
   const [files, setFiles] = useState<File[]>([]);
@@ -10,6 +10,8 @@ export default function FileRenamerPro() {
   const [digits, setDigits] = useState(3);
   const [startNumber, setStartNumber] = useState(1);
   const [isDragging, setIsDragging] = useState(false);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [showPreviews, setShowPreviews] = useState(true);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFiles = (incoming: FileList | null) => {
@@ -30,6 +32,7 @@ export default function FileRenamerPro() {
 
   const clearAll = () => {
     setFiles([]);
+    setPreviewImage(null);
   };
 
   const generateRenamedFiles = () => {
@@ -38,7 +41,14 @@ export default function FileRenamerPro() {
       const number = String(index + startNumber).padStart(digits, "0");
       const newName = `${prefix}${number}.${ext}`;
       const renamedFile = new File([file], newName, { type: file.type });
-      return { old: file.name, new: newName, file: renamedFile, type: ext };
+      return { 
+        old: file.name, 
+        new: newName, 
+        file: renamedFile, 
+        type: ext,
+        originalFile: file,
+        preview: URL.createObjectURL(file)
+      };
     });
   };
 
@@ -74,10 +84,44 @@ export default function FileRenamerPro() {
     return <FaFile className="text-gray-400" />;
   };
 
+  const isImageFile = (type: string | undefined) => {
+    return type && ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(type);
+  };
+
+  const openPreview = (imageUrl: string) => {
+    setPreviewImage(imageUrl);
+  };
+
+  const closePreview = () => {
+    setPreviewImage(null);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 flex items-center justify-center p-4">
-      {/* Main Container - Centered in the middle */}
-      <div className="w-full max-w-4xl bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20">
+      {/* Image Preview Modal */}
+      {previewImage && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          onClick={closePreview}
+        >
+          <div className="relative max-w-4xl max-h-full">
+            <button
+              onClick={closePreview}
+              className="absolute -top-12 right-0 text-white text-2xl hover:text-gray-300 transition"
+            >
+              <FaTimes />
+            </button>
+            <img
+              src={previewImage}
+              alt="Preview"
+              className="max-w-full max-h-[80vh] object-contain rounded-lg"
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Main Container */}
+      <div className="w-full max-w-6xl bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20">
         
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
@@ -90,15 +134,28 @@ export default function FileRenamerPro() {
             </h1>
           </div>
           
-          {files.length > 0 && (
-            <button
-              onClick={clearAll}
-              className="flex items-center gap-2 px-3 py-2 text-red-500 hover:bg-red-50 rounded-lg transition text-sm"
-            >
-              <FaTimes />
-              Clear All
-            </button>
-          )}
+          <div className="flex items-center gap-4">
+            {files.length > 0 && (
+              <>
+                <button
+                  onClick={() => setShowPreviews(!showPreviews)}
+                  className="flex items-center gap-2 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition text-sm"
+                  title={showPreviews ? "Hide previews" : "Show previews"}
+                >
+                  {showPreviews ? <FaEyeSlash /> : <FaEye />}
+                  {showPreviews ? "Hide Previews" : "Show Previews"}
+                </button>
+                
+                <button
+                  onClick={clearAll}
+                  className="flex items-center gap-2 px-3 py-2 text-red-500 hover:bg-red-50 rounded-lg transition text-sm"
+                >
+                  <FaTimes />
+                  Clear All
+                </button>
+              </>
+            )}
+          </div>
         </div>
 
         {/* Main Content */}
@@ -177,51 +234,125 @@ export default function FileRenamerPro() {
 
           {/* Files Preview */}
           {renamed.length > 0 && (
-            <div className="space-y-3 max-h-64 overflow-y-auto pr-2">
+            <div className={`space-y-4 max-h-96 overflow-y-auto pr-2 ${showPreviews ? 'pb-4' : ''}`}>
               {renamed.map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-200 border border-gray-200"
+                  className={`bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-200 border border-gray-200 overflow-hidden ${
+                    showPreviews && isImageFile(item.type) ? 'p-4' : 'p-4'
+                  }`}
                 >
-                  <div className="flex items-center gap-3 flex-1 min-w-0">
-                    <div className="p-2 bg-white rounded-lg shadow-sm">
-                      {getFileIcon(item.type)}
-                    </div>
-                    
-                    <div className="flex-1 min-w-0">
-                      <p className="text-xs text-gray-500 truncate">
-                        {item.old}
-                      </p>
-                      <p className="text-sm font-semibold text-green-600 truncate">
-                        {item.new}
-                      </p>
-                    </div>
-                  </div>
+                  {/* Compact View */}
+                  {(!showPreviews || !isImageFile(item.type)) && (
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3 flex-1 min-w-0">
+                        <div className="p-2 bg-white rounded-lg shadow-sm">
+                          {getFileIcon(item.type)}
+                        </div>
+                        
+                        <div className="flex-1 min-w-0">
+                          <p className="text-xs text-gray-500 truncate">
+                            {item.old}
+                          </p>
+                          <p className="text-sm font-semibold text-green-600 truncate">
+                            {item.new}
+                          </p>
+                        </div>
+                      </div>
 
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={() => removeFile(i)}
-                      className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition"
-                      title="Remove file"
-                    >
-                      <FaTrash className="text-sm" />
-                    </button>
-                    
-                    <button
-                      onClick={() => {
-                        const url = URL.createObjectURL(item.file);
-                        const a = document.createElement("a");
-                        a.href = url;
-                        a.download = item.new;
-                        a.click();
-                        URL.revokeObjectURL(url);
-                      }}
-                      className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
-                      title="Download single file"
-                    >
-                      <FaDownload className="text-sm" />
-                    </button>
-                  </div>
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={() => removeFile(i)}
+                          className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition"
+                          title="Remove file"
+                        >
+                          <FaTrash className="text-sm" />
+                        </button>
+                        
+                        <button
+                          onClick={() => {
+                            const url = URL.createObjectURL(item.file);
+                            const a = document.createElement("a");
+                            a.href = url;
+                            a.download = item.new;
+                            a.click();
+                            URL.revokeObjectURL(url);
+                          }}
+                          className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+                          title="Download single file"
+                        >
+                          <FaDownload className="text-sm" />
+                        </button>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Expanded View with Image Preview */}
+                  {showPreviews && isImageFile(item.type) && (
+                    <div className="flex gap-4">
+                      {/* Image Preview */}
+                      <div className="flex-shrink-0">
+                        <div 
+                          className="w-20 h-20 bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition group relative"
+                          onClick={() => openPreview(item.preview)}
+                        >
+                          <img
+                            src={item.preview}
+                            alt={`Preview ${i}`}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition flex items-center justify-center">
+                            <FaEye className="text-white opacity-0 group-hover:opacity-100 transition" />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* File Info */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-start justify-between mb-2">
+                          <div className="flex-1 min-w-0">
+                            <p className="text-xs text-gray-500 truncate mb-1">
+                              <span className="font-medium">Original:</span> {item.old}
+                            </p>
+                            <p className="text-sm font-semibold text-green-600 truncate">
+                              <span className="font-medium">Nuevo:</span> {item.new}
+                            </p>
+                          </div>
+                          
+                          <div className="flex items-center gap-2 ml-4">
+                            <button
+                              onClick={() => removeFile(i)}
+                              className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition"
+                              title="Remove file"
+                            >
+                              <FaTrash className="text-sm" />
+                            </button>
+                            
+                            <button
+                              onClick={() => {
+                                const url = URL.createObjectURL(item.file);
+                                const a = document.createElement("a");
+                                a.href = url;
+                                a.download = item.new;
+                                a.click();
+                                URL.revokeObjectURL(url);
+                              }}
+                              className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+                              title="Download single file"
+                            >
+                              <FaDownload className="text-sm" />
+                            </button>
+                          </div>
+                        </div>
+                        
+                        {/* File Details */}
+                        <div className="flex gap-4 text-xs text-gray-500">
+                          <span>Tipo: {item.type?.toUpperCase()}</span>
+                          <span>Tamaño: {(item.originalFile.size / 1024 / 1024).toFixed(2)} MB</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -232,7 +363,8 @@ export default function FileRenamerPro() {
         {files.length > 0 && (
           <div className="flex justify-between items-center p-6 border-t border-gray-200 bg-gray-50 rounded-b-3xl">
             <div className="text-sm text-gray-600">
-              {files.length} file{files.length !== 1 ? 's' : ''} selected
+              {files.length} file{files.length !== 1 ? 's' : ''} selected • 
+              {files.filter(f => isImageFile(f.name.split('.').pop()?.toLowerCase())).length} images
             </div>
             
             <div className="flex gap-3">
